@@ -1,0 +1,34 @@
+name: 'AWS CDK Java GitHub Actions'
+description: 'Runs AWS-CDK via GitHub Actions.'
+author: 'Param <parameswaranvv@gmail.com>'
+branding:
+  icon: 'crosshair'
+  color: 'green'
+inputs:
+  cdk_stack:
+    description: 'AWS CDK stack name to execute.'
+    default: '*'
+  cdk_version:
+    description: 'AWS CDK version to install.'
+    default: 'latest'
+  cdk_subcommand:
+    description: 'AWS CDK subcommand to execute.'
+    required: true
+  cdk_args:
+    description: 'AWS CDK subcommand arguments.'
+    required: false
+  working_dir:
+    description: 'AWS CDK working directory.'
+    default: '.'
+  actions_comment:
+    description: 'Whether or not to comment on pull requests.'
+    default: true
+  debug_log:
+    description: 'Enable debug-log'
+    default: false
+outputs:
+  status_code:
+    description: 'Returned status code.'
+runs:
+  using: 'docker'
+  image: './Dockerfile'
