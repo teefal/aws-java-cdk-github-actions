@@ -1,9 +1,9 @@
-name: 'AWS CDK GitHub Actions with Java'
+name: 'AWS CDK GitHub Actions with Java 11'
 description: 'Runs AWS-CDK via GitHub Actions.'
 author: 'Param <parameswaranvv@gmail.com>'
 branding:
-  icon: 'crosshair'
-  color: 'green'
+  icon: 'terminal'
+  color: 'yellow'
 inputs:
   cdk_stack:
     description: 'AWS CDK stack name to execute.'
