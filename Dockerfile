@@ -1,6 +1,6 @@
 FROM openjdk:11-slim
 
-RUN apk --update --no-cache add nodejs nodejs-npm python3 py3-pip jq curl bash git docker && \
+RUN apt update && apt install -y nodejs npm python3 python3-pip jq curl bash git docker && \
 	ln -sf /usr/bin/python3 /usr/bin/python
 
 COPY entrypoint.sh /entrypoint.sh
