@@ -1,4 +1,4 @@
-FROM openjdk:11-slim
+FROM adoptopenjdk/openjdk11:debian-slim
 
 RUN apt update && apt install -y nodejs npm python3 python3-pip jq curl bash git docker && \
 	ln -sf /usr/bin/python3 /usr/bin/python
