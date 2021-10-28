@@ -3,12 +3,15 @@
 
 AWS-Java-CDK GitHub Actions allow you to run `cdk deploy` and `cdk diff` and ... on your pull requests to help you review.
 
-## Supported language
+## Supported languages
 
+- Java
+
+but also:
 - TypeScript
 - JavaScript
 - Python
-- Java
+
 
 ## Example usage
 
