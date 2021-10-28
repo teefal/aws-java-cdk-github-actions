@@ -15,6 +15,7 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
  && echo $JAVA_HOME
 
 ENV MAVEN_HOME /usr/share/maven
+
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
 ENTRYPOINT ["/entrypoint.sh"]
