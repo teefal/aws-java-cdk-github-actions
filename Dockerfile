@@ -11,7 +11,7 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
  && curl -fsSL -o /tmp/apache-maven.tar.gz https://apache.osuosl.org/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.tar.gz \
  && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1 \
  && rm -f /tmp/apache-maven.tar.gz \
- && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
+ && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn \
  && echo $JAVA_HOME
 
 ENV MAVEN_HOME /usr/share/maven
