@@ -102,19 +102,12 @@ ${output}
   fi
 }
 
-function setRegion() {
-  if [[ -z "$AWS_DEFAULT_REGION" ]]; then
-    aws configure set region $AWS_DEFAULT_REGION
-  fi
-}
-
 function main() {
   parseInputs
   cd ${GITHUB_WORKSPACE}/${INPUT_WORKING_DIR}
   installTypescript
   installAwsCdk
   installPipRequirements
-  setRegion
   runCdk ${INPUT_CDK_ARGS}
 }
 
