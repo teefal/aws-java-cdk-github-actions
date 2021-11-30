@@ -1,7 +1,7 @@
 
 # AWS-Java-CDK GitHub Actions
 [![Docker Image Build](https://github.com/roechi/aws-java-cdk-github-actions/actions/workflows/build-docker-image.yml/badge.svg)](https://github.com/roechi/aws-java-cdk-github-actions/actions/workflows/build-docker-image.yml)
-[![Release](https://github.com/roechi/aws-java-cdk-github-actions/actions/workflows/push-docker-image.yml/badge.svg?event=release)](https://github.com/roechi/aws-java-cdk-github-actions/actions/workflows/push-docker-image.yml)
+[![GitHub Release](https://img.shields.io/github/release/roechi/aws-java-cdk-github-actions.svg?style=flat)](https://github.com/roechi/aws-java-cdk-github-actions/releases) 
 
 AWS-Java-CDK GitHub Actions allow you to run `cdk deploy` and `cdk diff` and ... on your pull requests to help you review.
 
