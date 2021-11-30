@@ -1,0 +1,23 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag roechi/aws-java-cdk-github-actions:${{ github.event.release.tag_name }}
+
+    - uses: elgohr/Publish-Docker-Github-Action@master
+      name: Publish to Registry
+      with:
+        name: roechi/aws-java-cdk-github-actions:${{ github.event.release.tag_name }}
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
