@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - name: Build the Docker image
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
       run: docker build . --file Dockerfile --tag roechi/aws-java-cdk-github-actions:${{env.versions}}
 
     - name: Publish to Registry
